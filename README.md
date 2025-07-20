@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+# 🌡️ Temperature Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A basic yet elegant temperature converter built as part of the [roadmap.sh](https://roadmap.sh/projects/temperature-converter) projects. This app allows users to convert temperatures between **Celsius**, **Fahrenheit**, and **Kelvin** with a clean UI and smooth animations.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔒 **Form Validation**: The "Convert" button is **disabled** until all input fields (`temperature`, `fromUnit`, and `toUnit`) are filled, preventing incomplete submissions.
+- 🎞️ **Animated Results**: The result display uses `AnimatePresence` from **Framer Motion** for a smooth and polished reveal animation.
+- 💡 **Simple Logic**: Core temperature conversion logic is easy to understand and extend.
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> <img width="728" height="653" alt="image" src="https://github.com/user-attachments/assets/690fc517-cabf-4079-b8c5-d387cfd456c4" />
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📦 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React**
+- **TypeScript**
+- **Framer Motion**
+- **Tailwind CSS**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To run the project locally:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+git clone https://github.com/paulomantilla04/temperature-converter
+cd temperature-converter
+bun install
+bun dev
